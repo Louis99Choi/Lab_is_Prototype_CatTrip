@@ -68,8 +68,8 @@ public class Player_Movement : MonoBehaviour
                 vector.x = 0;
             }
 
-            animator.SetFloat("DirX", vector.x); //vector.x가 인수가 되어 객체의 Animator창에서 설정(x,y의 -1,1 등)값과 비교됨
-            animator.SetFloat("DirY", vector.y);
+            /*animator.SetFloat("DirX", vector.x); //vector.x가 인수가 되어 객체의 Animator창에서 설정(x,y의 -1,1 등)값과 비교됨
+            animator.SetFloat("DirY", vector.y);*/
 
             RaycastHit2D hit; //레이저를 쏴서 맞는것이 hit에 저장되는 클래스 객채 생성
 
@@ -84,7 +84,7 @@ public class Player_Movement : MonoBehaviour
             if (hit.transform != null) //hit = null 이면 뒤의 움직임 코드 진행
                 break;
 
-            animator.SetBool("Walking", true);
+            /*animator.SetBool("Walking", true);*/
 
             while (currentWalkCount < walkCount)
             {
@@ -97,7 +97,7 @@ public class Player_Movement : MonoBehaviour
             currentWalkCount = 0;
 
         }
-        animator.SetBool("Walking", false);
+        /*animator.SetBool("Walking", false);*/
         canMove = true;
 
     }
