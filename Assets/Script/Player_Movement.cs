@@ -22,6 +22,9 @@ public class Player_Movement : MonoBehaviour
     private bool applyRunFlag = false;
     private bool canMove = true;
 
+    public GameObject V;
+    public GameObject Item;
+
     private void Start()
     {
         boxCollider = this.GetComponent<BoxCollider2D>();
@@ -117,5 +120,43 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
+        if(Time.timeScale > 0.0f)
+        {
+            if (V.activeSelf == true)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    GameManager.playergold += 100;
+                    Item.SetActive(false);
+                    V.SetActive(false);
+                }
+
+
+            }
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            V.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            V.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
     }
 }

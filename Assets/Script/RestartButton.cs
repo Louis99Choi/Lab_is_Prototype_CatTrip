@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FirstMapButton : MonoBehaviour
+public class RestartButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,16 +19,6 @@ public class FirstMapButton : MonoBehaviour
     public void ChangeGameScene()
     {
         SceneManager.LoadScene("CountDown");
-    }    
-    public void buy()
-    {
-        if (GameManager.playergold >= GameManager.firstmapgold)
-        {
-            GameManager.playergold -= GameManager.firstmapgold;
-        }
-        else
-        {
-            return;
-        }
+        Time.timeScale = 1.0f;
     }
 }
