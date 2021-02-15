@@ -6,7 +6,20 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public GameManager V;
+    public static Item instancee;
     // Start is called before the first frame update
+/*    private void Awake()
+    {
+        if (instancee == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instancee = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }*/
     void Start()
     {
         float Rx = UnityEngine.Random.Range(0.0f, 100.0f);

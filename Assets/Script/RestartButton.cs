@@ -19,6 +19,10 @@ public class RestartButton : MonoBehaviour
     public void ChangeGameScene()
     {
         SceneManager.LoadScene("CountDown");
+    }
+    public void TimeMagician()
+    {
         Time.timeScale = 1.0f;
     }
+
 }

@@ -29,8 +29,9 @@ public class Player_Movement : MonoBehaviour
     {
         boxCollider = this.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        Time.timeScale = 1.0f;
     }
-    private void Awake()
+/*    private void Awake()
     {
         if (instance == null)
         {
@@ -41,7 +42,7 @@ public class Player_Movement : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 
 
     IEnumerator MoveCoroutine()
@@ -134,7 +135,10 @@ public class Player_Movement : MonoBehaviour
 
             }
         }
-        
+        else
+        {
+            return;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
