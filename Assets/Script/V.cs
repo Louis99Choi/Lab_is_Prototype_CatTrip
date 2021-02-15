@@ -30,5 +30,27 @@ public class V : MonoBehaviour
     void Update()
     {
         transform.position = Item.transform.position + vec;
+        if (Time.timeScale > 0.0f)
+        {
+            if (this.gameObject.activeSelf == true)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    this.gameObject.SetActive(false);
+                }
+            }
+        }
     }
+
+/*    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            return; 
+        }
+    }*/
 }
