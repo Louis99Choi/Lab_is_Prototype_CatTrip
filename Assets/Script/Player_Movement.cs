@@ -30,7 +30,7 @@ public class Player_Movement : MonoBehaviour
     {
         boxCollider = this.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        Time.timeScale = 1.0f;
+        Time .timeScale = 1.0f;
 
 /*        ArraySize = 10;
         Item = new GameObject[ArraySize];

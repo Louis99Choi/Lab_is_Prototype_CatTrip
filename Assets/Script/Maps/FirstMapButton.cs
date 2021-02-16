@@ -22,13 +22,13 @@ public class FirstMapButton : MonoBehaviour
     }    
     public void buy()
     {
-        if (GameManager.playergold >= GameManager.firstmapgold)
+/*        if (GameManager.playergold >= MapManger.)
         {
             GameManager.playergold -= GameManager.firstmapgold;
         }
         else
         {
             return;
-        }
+        }*/
     }
 }

@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public float CurrentTime;
     public Text GameTimeText;
     public static int playergold;
-    public static int firstmapgold;
     public GameObject Background;
 
     // Update is called once per frame
