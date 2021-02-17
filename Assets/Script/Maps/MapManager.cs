@@ -8,13 +8,12 @@ public enum Maps
     FirstMap, SecondMap
 }
 
-public class MapManger : MonoBehaviour
+public class MapManager : MonoBehaviour
 {
-    public static MapManger Instance;
+    public static MapManager Instance;
     public Maps CurrentMap;
 
     public GameObject Background;
-    public GameObject FirstMap;
 
     public Text TextBt;
 
