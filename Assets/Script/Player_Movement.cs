@@ -22,12 +22,21 @@ public class Player_Movement : MonoBehaviour
     private bool applyRunFlag = false;
     private bool canMove = true;
 
+/*    public GameObject[] V;
+    public GameObject[] Item;
+    public int ArraySize;*/
+
     private void Start()
     {
         boxCollider = this.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        Time .timeScale = 1.0f;
+
+/*        ArraySize = 10;
+        Item = new GameObject[ArraySize];
+        V = new GameObject[ArraySize];*/
     }
-    private void Awake()
+/*    private void Awake()
     {
         if (instance == null)
         {
@@ -38,7 +47,7 @@ public class Player_Movement : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 
 
     IEnumerator MoveCoroutine()
@@ -76,7 +85,7 @@ public class Player_Movement : MonoBehaviour
             Vector2 start = transform.position; // A지점, 캐릭터의 현재 위치값
             Vector2 end = start + new Vector2(vector.x * speed * walkCount, vector.y * speed * walkCount); // B지점, 캐릭터가 이동하고자 하는 위치 값
 
-            boxCollider.enabled = false; //Raycastd에 플래이어 객체의 콜라이더 값이 들어가는 것을 방지하기위해 콜라이더를 끔
+            boxCollider.enabled = false; //Raycast에 플래이어 객체의 콜라이더 값이 들어가는 것을 방지하기위해 콜라이더를 끔
 
             hit = Physics2D.Linecast(start, end, layerMask); //실제로 레이저를 쏘는 것이 실행되는 코드
             boxCollider.enabled = true;
@@ -116,6 +125,28 @@ public class Player_Movement : MonoBehaviour
                 StartCoroutine(MoveCoroutine());
             }
         }
-
     }
+
+/*    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            V.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            V.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
+    }*/
 }
