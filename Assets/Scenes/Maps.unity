@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 360076281}
   - component: {fileID: 360076280}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,8 +375,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Map: 1
   Background: {fileID: 1780460408}
-  Text: {fileID: 908499824}
-  MapGold: 0000000064000000
+  MenuText: {fileID: 908499824}
+  ButtonText: {fileID: 360076280}
+  ButtonString:
+  - "\uC774\uB3D9\uD558\uAE30!"
+  - "\uC794\uC561\uBD80\uC871!"
+  MapManager: {fileID: 1039275138}
 --- !u!50 &804674758
 Rigidbody2D:
   serializedVersion: 4
@@ -490,7 +494,7 @@ GameObject:
   - component: {fileID: 908499825}
   - component: {fileID: 908499824}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,8 +869,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Map: 0
   Background: {fileID: 1780460408}
-  Text: {fileID: 908499824}
-  MapGold: 0000000064000000
+  MenuText: {fileID: 908499824}
+  ButtonText: {fileID: 360076280}
+  ButtonString:
+  - 
+  - 
+  MapManager: {fileID: 1039275138}
 --- !u!1 &1039275137
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +886,7 @@ GameObject:
   - component: {fileID: 1039275139}
   - component: {fileID: 1039275138}
   m_Layer: 0
-  m_Name: MapManger
+  m_Name: MapManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,12 +906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentMap: 0
   Background: {fileID: 1780460408}
-  FirstMap: {fileID: 0}
-  TextBt: {fileID: 360076280}
   MapGold: 0000000064000000
-  talk:
-  - "\uC774\uB3D9\uD558\uAE30!"
-  - "\uC794\uC561\uBD80\uC871!"
 --- !u!4 &1039275139
 Transform:
   m_ObjectHideFlags: 0
@@ -1236,5 +1239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8460db5b2ccc7204c9658cbe82ff316c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: 0
-  SelectMap: {fileID: 0}
+  SelectMap: {fileID: 1038197109}
+  MapManager: {fileID: 1039275138}

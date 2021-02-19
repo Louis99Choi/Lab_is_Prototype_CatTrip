@@ -15,17 +15,16 @@ public class MapManager : MonoBehaviour
 
     public GameObject Background;
 
-    public Text TextBt;
-
     public int[] MapGold;
 
-    public string[] talk;
+
 
 
 
     // Start is called before the first frame update
     private void Awake()
     {
+
         if (Instance == null)
         {
             Instance = this;
@@ -48,15 +47,7 @@ public class MapManager : MonoBehaviour
             Background.SetActive(false);
         }
 
-        if (GameManager.playergold >= MapGold[0])
-        {
-            TextBt.text = talk[0];
-        }
-        else
-        {
-            TextBt.text = talk[1];
-        }
-
+ 
     }
 /*    public void OnMouseDown(GameObject Maps)
     {
