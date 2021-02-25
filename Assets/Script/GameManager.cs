@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
             GameTimeText.text = "" + (int)CurrentTime;
         }
 
-        else/* if (CurrentTime < 0.0f)*/
+        else/* if (CurrentTime =< 0.0f)*/
         {
             Background.SetActive(true);
             GameTimeText.text = "게임종료";

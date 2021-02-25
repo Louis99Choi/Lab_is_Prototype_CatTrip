@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class V : MonoBehaviour
+public class Describe_Item : MonoBehaviour
 {
     public GameObject Item;
-    public static V instanceee;
-    Vector3 vec = new Vector3(0,5,0);
-    // Start is called before the first frame update
+    //public static V instanceee;
+
+    Vector3 vec_ItemUpDifference = new Vector3(0,5,0);
 
 /*    private void Awake()
     {
@@ -23,13 +23,13 @@ public class V : MonoBehaviour
     }*/
     void Start()
     {
-        transform.position = Item.transform.position + vec;
+        transform.position = Item.transform.position + vec_ItemUpDifference;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Item.transform.position + vec;
+        transform.position = Item.transform.position + vec_ItemUpDifference;
         if (Time.timeScale > 0.0f)
         {
             if (this.gameObject.activeSelf == true)

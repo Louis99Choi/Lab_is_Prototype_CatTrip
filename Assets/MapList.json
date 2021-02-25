@@ -1,0 +1,12 @@
+[
+  {
+    "MapName": "FirstMap",
+    "MapCost": 0,
+    "IsOpen": true
+  },
+  {
+    "MapName": "SecondMap",
+    "MapCost": 100,
+    "IsOpen": false
+  }
+]

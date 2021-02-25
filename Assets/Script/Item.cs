@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public GameManager V;
-    public GameObject Vs;
-    public static Item instancee;
-    // Start is called before the first frame update
+    //public GameManager V;
+    public GameObject Describing;
+    //public static Item instancee;
+    
 /*    private void Awake()
     {
         if (instancee == null)
@@ -34,7 +34,7 @@ public class Item : MonoBehaviour
     {
         if (Time.timeScale > 0.0f)
         {
-            if (Vs.activeSelf == true)
+            if (Describing.activeSelf == true)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -52,7 +52,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Vs.SetActive(true);
+            Describing.SetActive(true);
         }
         else
         {
@@ -64,7 +64,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Vs.SetActive(false);
+            Describing.SetActive(false);
         }
         else
         {
