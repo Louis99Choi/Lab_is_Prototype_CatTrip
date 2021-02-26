@@ -31,19 +31,21 @@ public class FirstMapButton : MonoBehaviour
     {
         if (SelectMap.MenuText.text == SelectMap.V + MapManager.MapGold[0] + SelectMap.S)
         {
-            if (GameManager.playergold >= MapManager.MapGold[0])
+            if (DataManager.playergold >= MapManager.MapGold[0])
             {
                 SceneManager.LoadScene("CountDown");
-                GameManager.playergold -= MapManager.MapGold[0];
+                DataManager.playergold -= MapManager.MapGold[0];
+                DataManager.currentMapid = 0;
             }
 
         }
         else if (SelectMap.MenuText.text == SelectMap.V + MapManager.MapGold[1] + SelectMap.S)
         {
-            if (GameManager.playergold >= MapManager.MapGold[1])
+            if (DataManager.playergold >= MapManager.MapGold[1])
             {
                 SceneManager.LoadScene("Empty");
-                GameManager.playergold -= MapManager.MapGold[1];
+                DataManager.playergold -= MapManager.MapGold[1];
+                DataManager.currentMapid = 1;
             }
 
         }

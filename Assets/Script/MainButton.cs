@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
+using System.IO;
 
 public class MainButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    List<PlayerClass> PlayerList = new List<PlayerClass>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ChangeGameScene()
     {
+        PlayerList.Add(new PlayerClass(DataManager.playerid, DataManager.currentMapid, DataManager.playergold));
+
+        string playerData = JsonConvert.SerializeObject(PlayerList, Formatting.Indented);
+        File.WriteAllText(DataManager.filePath + "/PlayerList.json", playerData);
+
         SceneManager.LoadScene("Maps");
     }
 }

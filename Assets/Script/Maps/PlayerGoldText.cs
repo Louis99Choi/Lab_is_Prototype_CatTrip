@@ -17,6 +17,6 @@ public class PlayerGoldText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = GameManager.playergold + V;
+        text.text = DataManager.playergold + V;
     }
 }

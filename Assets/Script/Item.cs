@@ -38,7 +38,7 @@ public class Item : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    GameManager.playergold += 100;
+                    DataManager.playergold += 100;
                     this.gameObject.SetActive(false);
                  }
             }

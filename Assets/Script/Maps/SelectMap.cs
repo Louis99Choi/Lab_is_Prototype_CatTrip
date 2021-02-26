@@ -23,21 +23,13 @@ public class SelectMap : MonoBehaviour
 
     private void Awake()
     {
-        MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
+        //MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
     }
 
     void Start()
     {
-
         ButtonString[0] = "이동하기!";
         ButtonString[1] = "잔액부족!";
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void OnMouseDown()
@@ -47,9 +39,8 @@ public class SelectMap : MonoBehaviour
         {
             Background.SetActive(true);
             MenuText.text = V + MapManager.MapGold[0] + S;
-            MapManager.MapGold[1] += 50; 
 
-            if(GameManager.playergold >= MapManager.MapGold[0])
+            if(DataManager.playergold >= MapManager.MapGold[0])
             {
                 ButtonText.text = ButtonString[0];
             }
@@ -64,7 +55,7 @@ public class SelectMap : MonoBehaviour
             Background.SetActive(true);
             MenuText.text = V + MapManager.MapGold[1] + S;
 
-            if (GameManager.playergold >= MapManager.MapGold[1])
+            if (DataManager.playergold >= MapManager.MapGold[1])
             {
                 ButtonText.text = ButtonString[0];
             }

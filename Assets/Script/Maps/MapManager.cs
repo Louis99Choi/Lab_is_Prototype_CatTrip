@@ -42,17 +42,5 @@ public class MapManager : MonoBehaviour
 
  
     }
-/*    public void OnMouseDown(GameObject Maps)
-    {
-        if(Maps = FirstMap)
-        {
-            Background.SetActive(true);
-            Text[0].text = V + MapGold[0] + S;
-            return;
-        }
-        else
-        {
-            return;
-        }
-    }*/
+
 }
