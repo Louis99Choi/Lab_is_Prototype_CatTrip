@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     
     public GameObject Background;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     void Update()
     {
         if (CurrentTime > 0.0f)
@@ -25,14 +28,6 @@ public class GameManager : MonoBehaviour
             Background.SetActive(true);
             GameTimeText.text = "게임종료";
             Time.timeScale = 0.0f;
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                SceneManager.LoadScene("CountDown");
-                Time.timeScale = 1.0f;
-            }
-            else
-                return;
-
         }
         
     }

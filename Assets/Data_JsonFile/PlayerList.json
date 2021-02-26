@@ -1,7 +1,7 @@
 [
   {
     "playerID": 0,
-    "currentMapID": 0,
-    "playerGold": 0
+    "currentMapID": 1,
+    "playerGold": 600
   }
 ]

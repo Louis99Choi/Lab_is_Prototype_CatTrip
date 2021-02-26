@@ -5,24 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class RestartButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
     public void ChangeGameScene()
     {
-        SceneManager.LoadScene("CountDown");
-    }
-    public void TimeMagician()
-    {
-        Time.timeScale = 1.0f;
+        if(DataManager.currentMapid == 0)
+        {
+            SceneManager.LoadScene("FirstMapSCN");
+            Time.timeScale = 1.0f;
+        }
+        else if(DataManager.currentMapid == 1)
+        {
+            SceneManager.LoadScene("SecondMapSCN");
+            Time.timeScale = 1.0f;
+        }
+        
     }
 
 }
