@@ -4,15 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public enum ItemPoint : int
+{
+    Fish = 1, Milk = 2, K2C1 = 3, Guitar = 4
+} 
+
 public class GameManager : MonoBehaviour
 {
+    public static int TotalPoint;
+
     public float CurrentTime;
     public Text GameTimeText;
-    
     public GameObject Background;
 
     private void Start()
     {
+        TotalPoint = 0;
         Time.timeScale = 1;
     }
     void Update()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SelectMap : MonoBehaviour
 {
     [SerializeField]
-    public MapID Map;
+    public MapIndex MapName;
     public GameObject Background;
     public Text MenuText;
     public Text ButtonText;
@@ -19,28 +19,39 @@ public class SelectMap : MonoBehaviour
 
  
 
-    // Start is called before the first frame update
-
-    private void Awake()
-    {
-        //MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
-    }
-
     void Start()
     {
         ButtonString[0] = "이동하기!";
         ButtonString[1] = "잔액부족!";
     }
 
+    void CheckMapGold(MapIndex WhatisSelectedMap)
+    {
+        Background.SetActive(true);
+        MenuText.text = V + DataManager.MapList[(int)WhatisSelectedMap].MapCost + S;
+
+        if (DataManager.playergold >= DataManager.MapList[(int)WhatisSelectedMap].MapCost)
+        {
+            ButtonText.text = ButtonString[0];
+        }
+        else
+        {
+            ButtonText.text = ButtonString[1];
+        }
+    }
+
     public void OnMouseDown()
     {
-        MapManager.Instance.CurrentMap = Map;
-        if(Map == MapID.FirstMap)
+        MapManager.Instance.SelectedMap = MapName;
+
+        CheckMapGold(MapManager.Instance.SelectedMap);
+
+        /*if (MapName == MapIndex.FirstMap)
         {
             Background.SetActive(true);
-            MenuText.text = V + MapManager.MapGold[0] + S;
+            MenuText.text = V + DataManager.MapList[0].MapCost + S;
 
-            if(DataManager.playergold >= MapManager.MapGold[0])
+            if(DataManager.playergold >= DataManager.MapList[0].MapCost)
             {
                 ButtonText.text = ButtonString[0];
             }
@@ -50,7 +61,7 @@ public class SelectMap : MonoBehaviour
             }
             return;
         }
-        else if (Map == MapID.SecondMap)
+        else if (MapName == MapIndex.SecondMap)
         {
             Background.SetActive(true);
             MenuText.text = V + MapManager.MapGold[1] + S;
@@ -64,10 +75,6 @@ public class SelectMap : MonoBehaviour
                 ButtonText.text = ButtonString[1];
             }
             return;
-        }    
-        else
-        {
-            return;
-        }
+        }*/
     }
 }

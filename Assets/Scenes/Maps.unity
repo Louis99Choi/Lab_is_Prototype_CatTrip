@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0452df4abe12f204ba2c0c4689242790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerList: []
 --- !u!4 &64412366
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244472877
 GameObject:
@@ -229,7 +228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283094457
 GameObject:
@@ -417,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20b3b888eab6414381c2fd40b88c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: 11
+  MapName: 1
   Background: {fileID: 1780460408}
   MenuText: {fileID: 908499824}
   ButtonText: {fileID: 360076280}
@@ -722,7 +721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -215, y: -81.9}
+  m_AnchoredPosition: {x: -215, y: -82}
   m_SizeDelta: {x: 389.91467, y: 93.86511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024510731
@@ -911,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20b3b888eab6414381c2fd40b88c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: 1
+  MapName: 0
   Background: {fileID: 1780460408}
   MenuText: {fileID: 908499824}
   ButtonText: {fileID: 360076280}
@@ -948,9 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d7b787b8cfd374d9e50ff406765787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentMap: 0
+  SelectedMap: 0
   Background: {fileID: 1780460408}
-  MapGold: 0000000064000000
 --- !u!4 &1039275139
 Transform:
   m_ObjectHideFlags: 0
@@ -963,7 +961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089678265
 GameObject:
@@ -1283,6 +1281,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8460db5b2ccc7204c9658cbe82ff316c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectMap: {fileID: 1038197109}
-  MapManager: {fileID: 1039275138}
   Background: {fileID: 1780460408}

@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum  MapID : int
+public enum MapIndex : int
 {
-    FirstMap = 1, 
-    SecondMap = 11
+    FirstMap = 0, 
+    SecondMap = 1
 }
 
 public class MapManager : MonoBehaviour
 {
     public static MapManager Instance;
-    public MapID CurrentMap;
+    public MapIndex SelectedMap;
 
     public GameObject Background;
-
-    public int[] MapGold;
-
-
 
     private void Awake()
     {

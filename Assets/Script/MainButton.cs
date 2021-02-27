@@ -11,7 +11,9 @@ public class MainButton : MonoBehaviour
 
     public void ChangeGameScene()
     {
-        PlayerList.Add(new PlayerClass(DataManager.playerid, DataManager.currentMapid, DataManager.playergold));
+        DataManager.playergold += GameManager.TotalPoint * (int)50;
+
+        PlayerList.Add(new PlayerClass(DataManager.playerid, DataManager.currentMapindex, DataManager.playergold));
 
         string playerData = JsonConvert.SerializeObject(PlayerList, Formatting.Indented);
         File.WriteAllText(DataManager.filePath + "/PlayerList.json", playerData);
