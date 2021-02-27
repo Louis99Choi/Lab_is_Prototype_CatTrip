@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SelectMap : MonoBehaviour
 {
     [SerializeField]
-    public Maps Map;
+    public MapID Map;
     public GameObject Background;
     public Text MenuText;
     public Text ButtonText;
@@ -35,7 +35,7 @@ public class SelectMap : MonoBehaviour
     public void OnMouseDown()
     {
         MapManager.Instance.CurrentMap = Map;
-        if(Map == Maps.FirstMap)
+        if(Map == MapID.FirstMap)
         {
             Background.SetActive(true);
             MenuText.text = V + MapManager.MapGold[0] + S;
@@ -50,7 +50,7 @@ public class SelectMap : MonoBehaviour
             }
             return;
         }
-        else if (Map == Maps.SecondMap)
+        else if (Map == MapID.SecondMap)
         {
             Background.SetActive(true);
             MenuText.text = V + MapManager.MapGold[1] + S;

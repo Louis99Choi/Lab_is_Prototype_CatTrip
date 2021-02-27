@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Maps
+public enum  MapID : int
 {
-    FirstMap, SecondMap
+    FirstMap = 1, 
+    SecondMap = 11
 }
 
 public class MapManager : MonoBehaviour
 {
     public static MapManager Instance;
-    public Maps CurrentMap;
+    public MapID CurrentMap;
 
     public GameObject Background;
 

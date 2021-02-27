@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20b3b888eab6414381c2fd40b88c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: 1
+  Map: 11
   Background: {fileID: 1780460408}
   MenuText: {fileID: 908499824}
   ButtonText: {fileID: 360076280}
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20b3b888eab6414381c2fd40b88c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: 0
+  Map: 1
   Background: {fileID: 1780460408}
   MenuText: {fileID: 908499824}
   ButtonText: {fileID: 360076280}

@@ -19,19 +19,9 @@ public class MapButton : MonoBehaviour
 
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ChangeGameScene()
     {
-        if (SelectMap.MenuText.text == SelectMap.V + MapManager.MapGold[0] + SelectMap.S)
+        if (MapManager.Instance.CurrentMap == MapID.FirstMap)
         {
             if (DataManager.playergold >= MapManager.MapGold[0])
             {
@@ -41,7 +31,7 @@ public class MapButton : MonoBehaviour
             }
 
         }
-        else if (SelectMap.MenuText.text == SelectMap.V + MapManager.MapGold[1] + SelectMap.S)
+        else if (MapManager.Instance.CurrentMap == MapID.SecondMap)
         {
             if (DataManager.playergold >= MapManager.MapGold[1])
             {
