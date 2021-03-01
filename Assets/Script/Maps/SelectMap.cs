@@ -46,35 +46,5 @@ public class SelectMap : MonoBehaviour
 
         CheckMapGold(MapManager.Instance.SelectedMap);
 
-        /*if (MapName == MapIndex.FirstMap)
-        {
-            Background.SetActive(true);
-            MenuText.text = V + DataManager.MapList[0].MapCost + S;
-
-            if(DataManager.playergold >= DataManager.MapList[0].MapCost)
-            {
-                ButtonText.text = ButtonString[0];
-            }
-            else
-            {
-                ButtonText.text = ButtonString[1];
-            }
-            return;
-        }
-        else if (MapName == MapIndex.SecondMap)
-        {
-            Background.SetActive(true);
-            MenuText.text = V + MapManager.MapGold[1] + S;
-
-            if (DataManager.playergold >= MapManager.MapGold[1])
-            {
-                ButtonText.text = ButtonString[0];
-            }
-            else
-            {
-                ButtonText.text = ButtonString[1];
-            }
-            return;
-        }*/
     }
 }

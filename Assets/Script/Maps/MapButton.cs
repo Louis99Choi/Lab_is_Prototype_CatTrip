@@ -20,14 +20,6 @@ public class MapButton : MonoBehaviour
             SceneManager.LoadScene(DataManager.MapList[(int)WhatisSelectedMap].MapName);
 
             DataManager.MapList[(int)WhatisSelectedMap].IsOpen = true; //IsOpen의 상태를 변경
-
-            /*switch (WhatisSelectedMap)
-            {
-                case MapIndex.FirstMap:
-                    { SceneManager.LoadScene("FirstMapSCN"); break; }
-                case MapIndex.SecondMap:
-                    { SceneManager.LoadScene("SecondMapSCN"); break; }
-            }*/
         }
         else
         {
@@ -44,33 +36,7 @@ public class MapButton : MonoBehaviour
     {
         CompareGoldAndMoveMap(MapManager.Instance.SelectedMap);
         SaveMapData();
-        /*if (MapManager.Instance.SelectedMap == MapIndex.FirstMap)
-        {
-            if (DataManager.playergold >= MapManager.MapGold[0])
-            {
-                SceneManager.LoadScene("FirstMapSCN");
-                DataManager.playergold -= MapManager.MapGold[0];
-                DataManager.currentMapindex = (MapIndex)0;
-            }
-
-        }
-        else if (MapManager.Instance.SelectedMap == MapIndex.SecondMap)
-        {
-            if (DataManager.playergold >= MapManager.MapGold[1])
-            {
-                SceneManager.LoadScene("SecondMapSCN");
-                DataManager.playergold -= MapManager.MapGold[1];
-                DataManager.currentMapindex = (MapIndex)1;
-            }
-            else
-            {
-                Background.SetActive(false);
-            }
-        }
-        else
-        {
-            return;
-        }*/
+        
     }    
 
 }
