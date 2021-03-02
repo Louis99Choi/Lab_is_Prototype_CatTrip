@@ -1,0 +1,14 @@
+[
+  {
+    "MapTown": "FirstTown",
+    "MapName": "FirstMap",
+    "MapCost": 0,
+    "IsOpen": true
+  },
+  {
+    "MapTown": "FirstTown",
+    "MapName": "SecondMap",
+    "MapCost": 100,
+    "IsOpen": true
+  }
+]

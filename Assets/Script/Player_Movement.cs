@@ -22,6 +22,7 @@ public class Player_Movement : MonoBehaviour
     private bool applyRunFlag = false;
     private bool canMove = true;
 
+    GameObject NearItem;
 /*    public GameObject[] V;
     public GameObject[] Item;
     public int ArraySize;*/
@@ -127,26 +128,28 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-/*    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Item"))
+
+
+    /*    private void OnTriggerEnter2D(Collider2D collision)
         {
-            V.SetActive(true);
+            if (collision.gameObject.CompareTag("Item"))
+            {
+                V.SetActive(true);
+            }
+            else
+            {
+                return;
+            }
         }
-        else
+        private void OnTriggerExit2D(Collider2D collision)
         {
-            return;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Item"))
-        {
-            V.SetActive(false);
-        }
-        else
-        {
-            return;
-        }
-    }*/
+            if (collision.gameObject.CompareTag("Item"))
+            {
+                V.SetActive(false);
+            }
+            else
+            {
+                return;
+            }
+        }*/
 }

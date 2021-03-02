@@ -17,7 +17,7 @@ public class MapButton : MonoBehaviour
             DataManager.playergold -= DataManager.MapList[(int)WhatisSelectedMap].MapCost;
             DataManager.currentMapindex = WhatisSelectedMap;
 
-            SceneManager.LoadScene(DataManager.MapList[(int)WhatisSelectedMap].MapName);
+            SceneManager.LoadScene(DataManager.MapList[(int)WhatisSelectedMap].MapName); //= "FirstMap", "SecondMap"
 
             DataManager.MapList[(int)WhatisSelectedMap].IsOpen = true; //IsOpen의 상태를 변경
         }

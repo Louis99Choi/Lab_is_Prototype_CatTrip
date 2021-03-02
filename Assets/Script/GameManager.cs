@@ -39,3 +39,10 @@ public class GameManager : MonoBehaviour
         
     }
 }
+
+[System.Serializable]
+public class SlotData
+{
+    public bool IsEmpty;
+    public GameObject SlotObj;
+}

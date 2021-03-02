@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public enum MapIndex : int
 {
     FirstMap = 0, 
-    SecondMap = 1
+    SecondMap = 1,
+    ThirdMap = 2,
 }
 
 public class MapManager : MonoBehaviour
