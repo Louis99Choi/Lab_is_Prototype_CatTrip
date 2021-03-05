@@ -4,33 +4,24 @@ using UnityEngine;
 
 public class Exchange : MonoBehaviour
 {
-
-    private void Start()
-    {
-
-    }
-    // Start is called before the first frame update
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject Inv_Milk = GameObject.Find("Inv_Milk(Clone)"); 
-        GameObject Inv_Fish = GameObject.Find("Inv_Fish(Clone)");
 
         if (collision.gameObject.CompareTag("Exchange"))
         {
-            if (null != Inv_Milk) 
+            GameManager.TotalPoint += GameManager.tmpPoint;
+            GameManager.tmpPoint = 0;
+
+            for (int i = 0; i < Inventory.Instance.MaxSlot; i++)
             {
-                Destroy(Inv_Milk);
-                GameManager.TotalPoint += 1;
+                if (Inventory.Instance.Slots[i].IsEmpty)
+                    return;
+
+                else
+                    Destroy(GameObject.Find("Slot_" + i).transform.GetChild(0).gameObject);
             }
-            else if (null != Inv_Fish)
-            {
-                Destroy(Inv_Fish);
-                GameManager.TotalPoint += 2;
-            }
-            else
-            {
-                return;
-            }                      
+
         }
     }
 }

@@ -5,19 +5,20 @@ using UnityEngine;
 public class Slot : MonoBehaviour
 {
     Inventory Inventory;
-    public int num;
+    
+    private int slotIndex;
 
     void Start()
     {
         Inventory = GameObject.Find("Player").GetComponent<Inventory>();
-        num = int.Parse(gameObject.name.Substring(gameObject.name.IndexOf("_") + 1));
+        slotIndex = int.Parse(gameObject.name.Substring(gameObject.name.IndexOf("_") + 1));
     }
-
+    
     private void Update()
     {
         if (transform.childCount <= 0)
         {
-            Inventory.Slots[num].IsEmpty = true;
+            Inventory.Slots[slotIndex].IsEmpty = true;
         }
     }
 }

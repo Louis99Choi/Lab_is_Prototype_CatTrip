@@ -29,7 +29,6 @@ public class MapManager : MonoBehaviour
             return;
         }
     }
- 
 
     void Update()
     {

@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static Inventory Instance;
+
     public List<SlotData> Slots = new List<SlotData>();
-    private int MaxSlot = 4;
+    public int MaxSlot = 4;
     public GameObject SlotPrefab;
+
+    private void Awake()
+    {
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != null)
+        {
+            return;
+        }
+    }
 
     private void Start()
     {
@@ -17,11 +31,10 @@ public class Inventory : MonoBehaviour
         {
             GameObject Go = Instantiate(SlotPrefab, SlotPanel.transform, false);
             Go.name = "Slot_" + i;
-            SlotData Slot = new SlotData();
-            Slot.IsEmpty = true;
-            Slot.SlotObj = Go;
+            SlotData Slot = new SlotData(true, Go);
             Slots.Add(Slot);
         }
     }
+
 }
 

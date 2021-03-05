@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 {
     public GameObject Describing;
     public GameObject SlotItem;
-    public ItemPoint ItemName;
+    public ItemIndex ItemName;
     public GameObject Player;
 
     void Start()
@@ -22,51 +22,41 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale > 0.0f)
-        {
-            if (Describing.activeSelf == true && Input.GetKeyDown(KeyCode.E))
-            {
-                Inventory Inven = Player.GetComponent<Inventory>();
-                for (int i = 0; i < Inven.Slots.Count; i++)
-                {
-                    if (Inven.Slots[i].IsEmpty)
-                    {
-                        Instantiate(SlotItem, Inven.Slots[i].SlotObj.transform, false);
-                        Inven.Slots[i].IsEmpty = false;
-                        Destroy(gameObject);
-                        Debug.Log("일단");
-                        break;
-                    }
-                }
-
-            }
-        }
-        else
-        {
-            return;
-        }
-
+        GetItem(ItemName);
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void GetItem(ItemIndex itemName)
     {
-        if (collision.gameObject.CompareTag("Player"))
-
+        if (Time.timeScale > 0.0f && Describing.activeSelf == true && Input.GetKeyDown(KeyCode.E))
         {
-            Describing.SetActive(true);
-/*
-            Inventory Inven = collision.GetComponent<Inventory>();
+            GameManager.tmpPoint += GameManager.ItemList[(int)itemName].ItemPoint;
+
+            Inventory Inven = Player.GetComponent<Inventory>();
             for (int i = 0; i < Inven.Slots.Count; i++)
             {
                 if (Inven.Slots[i].IsEmpty)
                 {
                     Instantiate(SlotItem, Inven.Slots[i].SlotObj.transform, false);
                     Inven.Slots[i].IsEmpty = false;
-                    Destroy(this.gameObject);
+                    Destroy(gameObject);
                     break;
                 }
-            }*/
+            }
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Describing.SetActive(true);
+
         }
         else
         {
