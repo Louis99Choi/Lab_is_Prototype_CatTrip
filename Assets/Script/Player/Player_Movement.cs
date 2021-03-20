@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-
+/*
     public static Player_Movement instance;
 
     public float speed; //player speed
@@ -22,10 +22,37 @@ public class Player_Movement : MonoBehaviour
     private bool applyRunFlag = false;
     private bool canMove = true;
 
-    GameObject NearItem;
-/*    public GameObject[] V;
-    public GameObject[] Item;
-    public int ArraySize;*/
+    GameObject NearItem;*/
+    /*    public GameObject[] V;
+        public GameObject[] Item;
+        public int ArraySize;*/
+
+   /* public IEnumerator MoveCoroutine()
+    {
+        while (Joystick.inputDirection != Vector2.zero)
+        {
+            RaycastHit2D hit; //레이저를 쏴서 맞는것이 hit에 저장되는 클래스 객채 생성
+
+            Vector2 start = transform.position; // A지점, 캐릭터의 현재 위치값
+            Vector2 end = start + new Vector2(vector.x * speed * walkCount, vector.y * speed * walkCount); // B지점, 캐릭터가 이동하고자 하는 위치 값
+
+            boxCollider.enabled = false; //Raycast에 플래이어 객체의 콜라이더 값이 들어가는 것을 방지하기위해 콜라이더를 끔
+
+            hit = Physics2D.Linecast(start, end, layerMask); //실제로 레이저를 쏘는 것이 실행되는 코드
+            boxCollider.enabled = true;
+
+            if (hit.transform != null) //hit = null 이면 뒤의 움직임 코드 진행
+                break;
+
+            while (currentWalkCount < walkCount)
+            {
+                transform.Translate(Joystick.inputDirection.x * (speed + applyRunSpeed), Joystick.inputDirection.y * (speed), 0);
+                currentWalkCount++;
+                yield return new WaitForSeconds(0.01f); //타일단위 이동시 픽셀 이동을 보여주기위해 대기시간 부여
+            }
+            currentWalkCount = 0;
+        }
+    }
 
     private void Start()
     {
@@ -33,11 +60,11 @@ public class Player_Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         Time .timeScale = 1.0f;
 
-/*        ArraySize = 10;
+*//*        ArraySize = 10;
         Item = new GameObject[ArraySize];
-        V = new GameObject[ArraySize];*/
+        V = new GameObject[ArraySize];*//*
     }
-/*    private void Awake()
+*//*    private void Awake()
     {
         if (instance == null)
         {
@@ -51,7 +78,7 @@ public class Player_Movement : MonoBehaviour
     }*/
 
 
-    IEnumerator MoveCoroutine()
+/*    IEnumerator MoveCoroutine()
     {
         while (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0) //방향키를 계속 누르고있을때 코루틴이 새로 실행되어 같은 애니매이션을 보이는것을 방지
         {
@@ -111,26 +138,26 @@ public class Player_Movement : MonoBehaviour
         canMove = true;
 
     }
-
+*//*
 
 
     // Update is called once per frame
     void Update()
     {
 
-        if (canMove) //코루틴 반복, 다중 실행을 막기 위함
-        {
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-            {
-                canMove = false;
-                StartCoroutine(MoveCoroutine());
-            }
-        }
+        *//*        if (canMove) //코루틴 반복, 다중 실행을 막기 위함
+                {
+                    if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+                    {
+                        canMove = false;
+                        StartCoroutine(MoveCoroutine());
+                    }
+                }*//*
     }
 
 
 
-    /*    private void OnTriggerEnter2D(Collider2D collision)
+    *//*    private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Item"))
             {

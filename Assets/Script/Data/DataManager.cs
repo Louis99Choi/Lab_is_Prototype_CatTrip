@@ -101,8 +101,8 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        filePath = (string)Application.dataPath + "/Data_JsonFile"; //빌드 시 구현 안되지만 Asset폴더 경로라 개발 중 보기 편함
-        //filePath = Application.persistentDataPath + "/Data_JsonFile"; //빌드 시 구현되게 하려면
+        //filePath = (string)Application.dataPath + "/Data_JsonFile"; //빌드 시 구현 안되지만 Asset폴더 경로라 개발 중 보기 편함
+        filePath = Application.persistentDataPath + "/Data_JsonFile"; //빌드 시 구현되게 하려면
 
         LoadPlayerData(filePath);
         LoadMapData(filePath);

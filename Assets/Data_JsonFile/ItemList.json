@@ -18,45 +18,5 @@
     "ItemName": "Guitar",
     "ItemPoint": 4,
     "ItmeVolume": 3
-  },
-  {
-    "ItemName": "Fish",
-    "ItemPoint": 1,
-    "ItmeVolume": 1
-  },
-  {
-    "ItemName": "Milk",
-    "ItemPoint": 2,
-    "ItmeVolume": 1
-  },
-  {
-    "ItemName": "K2C1",
-    "ItemPoint": 3,
-    "ItmeVolume": 4
-  },
-  {
-    "ItemName": "Guitar",
-    "ItemPoint": 4,
-    "ItmeVolume": 3
-  },
-  {
-    "ItemName": "Fish",
-    "ItemPoint": 1,
-    "ItmeVolume": 1
-  },
-  {
-    "ItemName": "Milk",
-    "ItemPoint": 2,
-    "ItmeVolume": 1
-  },
-  {
-    "ItemName": "K2C1",
-    "ItemPoint": 3,
-    "ItmeVolume": 4
-  },
-  {
-    "ItemName": "Guitar",
-    "ItemPoint": 4,
-    "ItmeVolume": 3
   }
 ]
