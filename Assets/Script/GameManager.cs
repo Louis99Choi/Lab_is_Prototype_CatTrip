@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void LoadItemData(string FilePath)
     {
-        if (!File.Exists(FilePath + "ItemList.json"))
+        if (!File.Exists(FilePath + "/ItemList.json"))
         {
             ResetItemList();
         }

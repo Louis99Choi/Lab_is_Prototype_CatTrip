@@ -5287,7 +5287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba9a4638335d3046b6e7d871c3ff650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTime: 70
+  CurrentTime: 11
   GameTimeText: {fileID: 1412258304}
   Background: {fileID: 1041660737}
 --- !u!4 &606551518

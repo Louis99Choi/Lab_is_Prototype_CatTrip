@@ -49,7 +49,7 @@ public class DataManager : MonoBehaviour
 
     private List<PlayerClass> PlayerList = new List<PlayerClass>();
     public static List<MapClass> MapList = new List<MapClass>();
-    //public List<ItemClass> ItemList = new List<ItemClass>();
+
 
     [ContextMenu("Reset PlayerData")]
     private void ResetPlayerData()
@@ -57,7 +57,7 @@ public class DataManager : MonoBehaviour
         PlayerList.Add(new PlayerClass(0, (MapIndex)0, 0));
 
         string playerData = JsonConvert.SerializeObject(PlayerList, Formatting.Indented);
-        File.WriteAllText(DataManager.filePath + "/PlayerList.json", playerData);
+        File.WriteAllText(filePath + "/PlayerList.json", playerData);
     }
 
     [ContextMenu("Reset MapData")]
@@ -101,8 +101,8 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        //filePath = (string)Application.dataPath + "/Data_JsonFile"; //빌드 시 구현 안되지만 Asset폴더 경로라 개발 중 보기 편함
-        filePath = Application.persistentDataPath + "/Data_JsonFile"; //빌드 시 구현되게 하려면
+        //filePath = (string)Application.dataPath; //빌드 시 구현 안되지만 Asset폴더 경로라 개발 중 보기 편함
+        filePath = Application.persistentDataPath; //빌드 시 구현되게 하려면
 
         LoadPlayerData(filePath);
         LoadMapData(filePath);
