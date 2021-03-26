@@ -8,9 +8,9 @@ using System.IO;
 
 public class MapButton : MonoBehaviour
 {
-    public GameObject Background;
+    /*    public GameObject Background;*/
 
-    private void CompareGoldAndMoveMap(MapIndex WhatisSelectedMap)
+/*    private void CompareGoldAndMoveMap(MapIndex WhatisSelectedMap)
     {
         if (DataManager.playergold >= DataManager.MapList[(int)WhatisSelectedMap].MapCost)
         {
@@ -23,19 +23,28 @@ public class MapButton : MonoBehaviour
         }
         else
         {
-            Background.SetActive(false);
+            *//*Background.SetActive(false);*//*
         }
-    }
-    private void SaveMapData()
+    }*/
+    private void MoveMap()
     {
-        string mapData = JsonConvert.SerializeObject(DataManager.MapList, Formatting.Indented);
-        File.WriteAllText(DataManager.filePath + "/MapList.json", mapData);
+        var PamNum = (int)MapManager.Instance.SelectPamphlet;
+        var MapNum = (int)MapManager.Instance.SelectedMap;
+        
+        SceneManager.LoadScene("Map"+ PamNum.ToString()+ MapNum.ToString());
     }
-
+    /*   private void SaveMapData()
+       {
+           string mapData = JsonConvert.SerializeObject(DataManager.MapList, Formatting.Indented);
+           File.WriteAllText(DataManager.filePath + "/MapList.json", mapData);
+       }
+   */
     public void ChangeGameScene()
     {
-        CompareGoldAndMoveMap(MapManager.Instance.SelectedMap);
-        SaveMapData();
+        /*CompareGoldAndMoveMap(MapManager.Instance.SelectedMap);*/
+        /*SaveMapData();*/
+        SelectPamphlet.IsPamphletOpen = false;
+        MoveMap();
         
     }    
 

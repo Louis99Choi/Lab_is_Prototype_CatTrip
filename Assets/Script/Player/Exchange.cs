@@ -19,7 +19,7 @@ public class Exchange : MonoBehaviour
                     return;
 
                 else
-                    Destroy(GameObject.Find("Slot_" + i).transform.GetChild(0).gameObject);
+                    Destroy(GameObject.Find("Slot_" + i).transform.GetChild(0). gameObject);
             }
 
         }
