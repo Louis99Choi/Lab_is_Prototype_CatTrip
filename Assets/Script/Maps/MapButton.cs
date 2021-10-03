@@ -44,8 +44,7 @@ public class MapButton : MonoBehaviour
         /*CompareGoldAndMoveMap(MapManager.Instance.SelectedMap);*/
         /*SaveMapData();*/
         SelectPamphlet.IsPamphletOpen = false;
-        MoveMap();
-        
+        MoveMap();        
     }    
 
 }

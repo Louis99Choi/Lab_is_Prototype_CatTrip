@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 
 public class SelectPamphlet : MonoBehaviour
 {
-    [SerializeField]
-    PamphletIndex PamphletName;
 
-    
+    public PamphletIndex PamphletName;
+    public MapIndex MapName;
+
     public static bool IsPamphletOpen;
 
     // Start is called before the first frame update
@@ -34,9 +34,11 @@ public class SelectPamphlet : MonoBehaviour
 
     public void OnMouseDown()
     {
+        MapName = MapIndex.FirstMap;
         if (!IsPamphletOpen)
         {
             CheckSelectedPamphlet();
+            MapManager.Instance.SelectedMap = MapName;
         }
         else
             return;

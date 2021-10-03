@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PamphletClose : MonoBehaviour
 {
+    public MapIndex MapName;
     // Start is called before the first frame update
     void Start()
     {
